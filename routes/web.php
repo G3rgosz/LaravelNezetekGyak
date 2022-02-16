@@ -50,3 +50,8 @@ Route::get("/services", [Service::class, "index"]);
 Route::get("/gyak",function(){
     return view("gyakorlo");
 });
+Route::get("/about_us", function(){
+    return view("admin/about_us", [
+        "names" => ["Béla", "Géza", "Kata", "Pali"]
+    ]);
+});
