@@ -21,7 +21,8 @@ Route::get('/', function () {
 Route::view("/services-view", "services");
 Route::get("/first", [Site::class, "index"]);
 Route::get("/services-controller", [Service::class, "index"]);
-Route::get("/services",function(){
-    // return "<h1>Szöveg az service útvonalról</h1>";
-    return view('services');
-});
+Route::get("/services/{id?}/{name}", [Service::class, "index"]);
+// Route::get("/services",function(){
+//     // return "<h1>Szöveg az service útvonalról</h1>";
+//     return view('services');
+// });
